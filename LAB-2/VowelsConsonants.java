@@ -21,9 +21,10 @@ public class VowelsConsonants {
                 spl += 1;
             }
         }
-        System.out.println("Number of vowes: "+v);
+        System.out.println("Number of vowels: "+v);
         System.out.println("Number of consonants: "+c);
         System.out.println("Number of spaces: "+s);
+        System.out.println("Number of words: "+(s+1));
         System.out.println("Number of digits: "+d);
         System.out.println("Number of special characters: "+spl);
         scanner.close();
