@@ -4,7 +4,7 @@ public class CapitalizingFirstWord {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a sentecne: ")   ;
         String sentence = scanner.nextLine();
-        String pascal_sentence = " ";
+        String pascal_sentence = "";
         pascal_sentence += sentence.substring(0,1).toUpperCase();
         for(int i=1; i<sentence.length(); i++){
             if(sentence.charAt(i-1) == ' ' && sentence.charAt(i)!=' '){
