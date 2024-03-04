@@ -20,11 +20,20 @@ public class VowelsConsonants {
             }else{
                 spl += 1;
             }
-        }
-        System.out.println("Number of vowels: "+v);
+        }int w = 0;
+        int i = 0;
+        while(i<str.length()){
+            if(str.charAt(i) == ' '){
+                while(str.charAt(i)==' '){
+                    i++;
+                }w++;
+            }else{
+                i++;
+            }
+        }System.out.println("Number of vowels: "+v);
         System.out.println("Number of consonants: "+c);
         System.out.println("Number of spaces: "+s);
-        System.out.println("Number of words: "+(s+1));
+        System.out.println("Number of words: "+(w+1));
         System.out.println("Number of digits: "+d);
         System.out.println("Number of special characters: "+spl);
         scanner.close();
