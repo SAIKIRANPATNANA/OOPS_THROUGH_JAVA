@@ -13,7 +13,9 @@ public class JavaLinkedList{
         System.out.println(li.isEmpty());
         System.out.println(li.size());
         System.out.println(li.getFirst());
-        System.out.print(li.getLast());
-        System.out.print(li);
+        System.out.println(li.getLast());
+        System.out.println(li);
+        System.out.println(li.indexOf(1));
+        System.out.println(li.lastIndexOf(12));
     }
 }
