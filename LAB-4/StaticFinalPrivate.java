@@ -1,6 +1,6 @@
 class Checking{
     static int a = 10;
-    private int b = 10;
+    // private int b = 10;
     final int c = 10;
 }
 public class StaticFinalPrivate {
