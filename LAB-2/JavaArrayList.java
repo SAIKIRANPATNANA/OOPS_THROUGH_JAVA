@@ -7,6 +7,7 @@ public class JavaArrayList{
         }System.out.println(li);
         li.add(11);
         System.out.println(li);
+        System.out.println(li.get(0));
         System.out.println(li.indexOf(5));
         System.out.println(li.lastIndexOf(12));
         System.out.println(li.isEmpty());

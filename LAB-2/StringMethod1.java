@@ -5,7 +5,7 @@ public class StringMethod1 {
         StringBuffer sb1 = new StringBuffer();
         System.out.println(sb1.capacity());
         System.out.println(sb.capacity());
-        System.out.println(sb.toString());
+        System.out.println(sb);
         sb.insert(0,"Love");
         System.out.println(sb.toString());
         sb.append("you");
