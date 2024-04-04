@@ -3,12 +3,13 @@ class Arithmetic{
         System.out.println(a+b);
     }
 }class Add extends Arithmetic{
-    void add(int a, float b){
-        System.out.println("After Adding: "+ (a+b));
+    int add(int a, float b, int c){
+        System.out.println("After Adding: "+ (a+b+3));
+        return a;
     }
 }public class MethodOverRiding { 
     public static void main(String[] args) {
         Add obj = new Add();
-        obj.add(1,2.5f);
+        System.out.println(obj.add(1,2.5f,3));
     }
 }

@@ -11,10 +11,13 @@ class CustomException extends Exception {
             if(age<18){
                 scanner.close();
                 throw new CustomException("You are not eligible to vote.");
+            }else{
+                System.out.println("you are eligible to vote.");
             }
-        }catch (CustomException exception){
-            // System.out.println(exception.getMessage());
-            exception.printStackTrace();
+        }catch (CustomException e){
+            System.out.println(e);
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }scanner.close();
     }
 }
