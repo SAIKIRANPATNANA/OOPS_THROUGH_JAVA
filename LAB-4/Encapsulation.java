@@ -1,13 +1,13 @@
 class EncapsulationStuff{
     private int a;
     private int b;
-    void setA(int a){
+    public void setA(int a){
         this.a = a;
-    }void setB(int b){
+    }public void setB(int b){
         this.b = b;
-    }int getA(){
+    }public int getA(){
         return this.a;
-    }int getB(){
+    }public int getB(){
         return this.b;
     }
 }public class Encapsulation {

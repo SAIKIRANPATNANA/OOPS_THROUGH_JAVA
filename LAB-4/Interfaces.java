@@ -8,7 +8,7 @@ interface in1 {
     void wish();
     int a = 10; //public static final initialized variables;
     int b = 10; //public abstract methods;
-}class in implements in1 {
+}class in implements in1,in2 {
     in(){
         System.out.println(in1.a);
         System.out.println(in1.b);
