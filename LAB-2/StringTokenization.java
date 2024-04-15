@@ -1,5 +1,4 @@
 import java.util.StringTokenizer;
-
 public class StringTokenization{
     public static void main(String[] args){
         StringTokenizer st = new StringTokenizer("what the fun..!");
