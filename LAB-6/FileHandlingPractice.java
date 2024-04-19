@@ -5,7 +5,7 @@ public class FileHandlingPractice {
         File f1 = new File("/home/user/Downloads/OOPS_THROUGH_JAVA/LAB-4");
         String [] files = f1.list();
         for(String str: files){
-            File f2 = new File(str);
+            File f2 = new File("/home/user/Downloads/OOPS_THROUGH_JAVA/LAB-4",str);
             if(f2.isDirectory()){
                 System.out.println(str + "is a directory.");
             }else if(f2.isFile()){
@@ -24,6 +24,7 @@ public class FileHandlingPractice {
         FileOutputStream fos = new FileOutputStream("/home/user/Downloads/OOPS_THROUGH_JAVA/LAB-6/sai.txt",true);
         String s = "Radha is loved by raju.\n";
         byte b[] = s.getBytes();
+        fos.write(143);
         fos.write(b);
         fos.flush();
         fos.close();
