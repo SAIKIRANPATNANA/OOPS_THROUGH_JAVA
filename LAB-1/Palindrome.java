@@ -7,7 +7,7 @@ public class Palindrome{
         String number = Integer.toString(num);
         int n = number.length();
         int flag = 0;
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n/2; i++){
             if(number.charAt(i) != number.charAt(n-i-1)){
                 flag = 1;
                 break;

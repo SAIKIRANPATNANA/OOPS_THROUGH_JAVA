@@ -7,7 +7,7 @@ public class LinearSearch{
         int array[] = new int[n];
         for(int i=0; i<n; i++){
             array[i] = scanner.nextInt();
-        }System.out.print("Enter elelemt to be searched: ");
+        }System.out.print("Enter element to be searched: ");
         int k = scanner.nextInt();
         int flag = 0;
         System.out.println("Enter elelemts: ");

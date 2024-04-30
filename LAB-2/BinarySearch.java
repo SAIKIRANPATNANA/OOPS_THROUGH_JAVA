@@ -8,7 +8,7 @@ public class BinarySearch{
         int array[] = new int[n];
         for(int i=0; i<n; i++){
             array[i] = scanner.nextInt();
-        }System.out.print("Enter elelemt to be searched: ");
+        }System.out.print("Enter element to be searched: ");
         int k = scanner.nextInt();
         int low = 0; 
         int high = n-1;
@@ -20,9 +20,9 @@ public class BinarySearch{
                 System.out.println("Your required element is found at index " + mid);
                 break;
             }else if(array[mid]>k){
-                low = mid+1;
-            }else {
                 high = mid-1;
+            }else {
+                low = mid+1;
             }
         }if(flag==0){
             System.out.println("Your required element is not found");
