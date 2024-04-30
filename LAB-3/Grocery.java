@@ -31,7 +31,7 @@ class Product{
             System.out.println(products[i].name +" "+products[i].quantity);
         }System.out.println("Total: " + totalRevenue);
     }
-}public class Main{
+}public class Grocery{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         GroceryStore grocery_store = new GroceryStore();
