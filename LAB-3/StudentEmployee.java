@@ -12,8 +12,7 @@ class Person{
         this.email = email;
         this.address = address;
         this.phoneNumber = phoneNumber;
-    }@Override
-    public String toString(){
+    }public String toString(){
         System.out.println("Student");
         return name;
     }
@@ -21,7 +20,6 @@ class Person{
     String office;
     String date;
     float salary;
-    @Override
     public String toString(){
         System.out.println("Person");
         return name;
@@ -29,14 +27,12 @@ class Person{
 }class Faculty extends Employee{
     int office_hrs;
     String rank;
-    @Override
     public String toString(){
         System.out.println("Faculty");
         return name;
     }
 }class Staff extends Employee{
     String title;
-    @Override
     public String toString(){
         System.out.println("Staff");
         return name;
