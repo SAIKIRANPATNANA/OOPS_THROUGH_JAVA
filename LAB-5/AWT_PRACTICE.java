@@ -2,35 +2,16 @@ import java.awt.event.*;
 import java.awt.*;
 import java.lang.*;
 class AWT extends Frame implements ActionListener{
-    Label l1;
-    Label l2;
-    Label l3;
-    Label l4;
-    Label l5;
-    Label l6;
-    Button b1;
-    Button b2;
-    Button b3;
-    Button b4;
-    TextField t1;
-    TextField t2;
-    TextField t3;
-    TextField t4;
+    Label l1,l2,l3,l4,l5,l6;
+    Button b1,b2,b3,b4;
+    TextField t1,t2,t3,t4;
     TextArea ta;
     Choice c;
-    CheckboxGroup cg1;
-    CheckboxGroup cg2;
-    Checkbox cb1;
-    Checkbox cb2;
-    Checkbox cb3;
-    Checkbox cb4;
+    CheckboxGroup cg1,cg2;
+    Checkbox cb1,cb2,cb3,cb4;
     MenuBar mb;
-    Menu menu;
-    MenuItem i1;
-    MenuItem i2;
-    MenuItem i3;
-    MenuItem i4;
-    Menu submenu;
+    Menu menu,submenu;
+    MenuItem i1,i2,i3,i4;
     AWT() {
         setTitle("AWT PRACTICE");
         setBackground(Color.green);
@@ -111,7 +92,10 @@ class AWT extends Frame implements ActionListener{
                 System.out.println("Mouse Clicked");
                 l6.setText(e.getX()+","+e.getY());
             }
-        });b3.addActionListener(this);
+        });
+        b1.addActionListener(this);
+        b2.addActionListener(this);
+        b3.addActionListener(this);
         b4.addActionListener(this);
         add(l1);
         add(l2);
@@ -140,9 +124,9 @@ class AWT extends Frame implements ActionListener{
         }if(e.getSource()==b4){
             l6.setText(String.valueOf(Integer.parseInt(t3.getText())-Integer.parseInt(t4.getText())));
         }if(e.getSource()==b2 && cb1.getState()){
-            l2.setText("You are Mr. "+t1.getText());
+            l6.setText("You are Mr. "+t1.getText());
         }if(e.getSource()==b2 && cb2.getState()){
-            l2.setText("You are Mrs. "+t1.getText());
+            l6.setText("You are Mrs. "+t1.getText());
         }
     }
 }public class AWT_PRACTICE {

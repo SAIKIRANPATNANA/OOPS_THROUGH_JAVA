@@ -45,7 +45,7 @@ class ExtendedThread extends Thread{
         super(l,b);
         this.h = h;
     }float getCuboidVolume(){
-        return l*b*h;
+        return getRectangleArea()*h;
     }float getCuboidArea(){
         return 2*(getRectangleArea()+b*h+l*h);
     }
