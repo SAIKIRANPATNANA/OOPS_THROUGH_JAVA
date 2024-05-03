@@ -18,7 +18,7 @@ interface GrandFather{
 }class Uncle implements PaternalGrandFather{
     float share = this.assets/(float)3;
     String name = this.surname + "Mahindra";
-}interface Mother implements MaternalGrandFather{
+}interface Mother extends MaternalGrandFather{
     float share = this.assets/(float)2;
     String name = this.surname + "Hasyaprabha";
 }class GrandChild implements Father, Mother{

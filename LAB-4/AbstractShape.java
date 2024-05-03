@@ -31,6 +31,5 @@ abstract class Shape{
         Circle circ = new Circle();
         System.out.println(circ.area(1));
         System.out.println(circ.perimeter(1));
-
     }
 }

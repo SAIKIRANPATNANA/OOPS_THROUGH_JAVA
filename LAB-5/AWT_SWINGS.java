@@ -23,10 +23,7 @@ class Window1 implements WindowListener{
         System.out.println("Window Closing");
         System.exit(0);
     }
-}class MOuseSwing extends MouseAdapter{
-
-}
-class ExtendedAWT extends Frame{
+}class ExtendedAWT extends Frame{
     ExtendedAWT(){
         setTitle("AWT PRACTICE");
         setVisible(true);
@@ -236,8 +233,7 @@ class ExtendedAWT extends Frame{
         // f.setSize(400,300);
         // f.setBackground(Color.green);
         // f.setForeground(Color.red);
-        // ExtendedAWT eawt = new ExtendedAWT();
-        ExtendedSWINGS swings = new ExtendedSWINGS();
-
+        ExtendedAWT eawt = new ExtendedAWT();
+        // ExtendedSWINGS swings = new ExtendedSWINGS();
     }
 }
