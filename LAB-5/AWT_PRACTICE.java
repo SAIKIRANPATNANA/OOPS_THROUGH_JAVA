@@ -117,7 +117,9 @@ class AWT extends Frame implements ActionListener{
         add(t4);
         add(ta);
         add(c);
-        add(li);
+        add(li);        
+        b1.addActionListener(this);
+        b2.addActionListener(this);
     }public void actionPerformed(ActionEvent e){
         if(e.getSource()==b3){
             l6.setText(String.valueOf(Integer.parseInt(t3.getText())+Integer.parseInt(t4.getText())));

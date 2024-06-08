@@ -1,4 +1,5 @@
 package JavaLabExam;
+import MultiLevelPackagesjava.MultiPkgLabExamPrep;
 import java.util.*;
 import java.io.*;
 import java.lang.*;
@@ -152,8 +153,22 @@ class Circle{
         }for(int val: arr){
             System.out.print(val+ " ");
         }return;
-    }
-    public static void main(String[] args) throws Exception{
+    }public static void characterFrequency(String str){
+        int flag[] = new int[str.length()];
+        for(int i=0; i<str.length(); i++){
+            flag[i] = 1;
+        }for(int i=0; i<str.length(); i++){
+            if(flag[i] == 1){
+                int c = 0;
+                for(int j=0; j<str.length(); j++){
+                    if(str.charAt(i)==str.charAt(j)){
+                        flag[j] = 0;
+                        c++;
+                    }
+                }System.out.println(str.charAt(i)+ " : " + c);
+            }
+        }return;
+    }public static void main(String[] args) throws Exception{
         String str = "sai12 how*& are you?";
         System.out.println(getPascalStr(str));
         getStrStats(str);
@@ -198,5 +213,9 @@ class Circle{
         fw.flush();
         fr.close();
         fw.close();
+        characterFrequency(code);
+        MultiPkgLabExamPrep mlp = new MultiPkgLabExamPrep();
+        mlp.display();
+        System.out.println(mlp.a);
     }
 }

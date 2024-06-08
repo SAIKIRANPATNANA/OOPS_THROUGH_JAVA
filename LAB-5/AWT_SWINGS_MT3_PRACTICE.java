@@ -41,7 +41,7 @@ class AWT extends Frame implements ActionListener{
         cg1 = new CheckboxGroup();
         cb1 = new Checkbox("Male",true,cg1);
         cb1.setBounds(100,220,200,30);
-        cb2 = new Checkbox("Female",false,cg1);
+        cb2 = new Checkbox("Female",true,cg1);
         cb2.setBounds(100,250,200,30);
         c1 = new Choice();
         c1.add("abc");
@@ -57,8 +57,6 @@ class AWT extends Frame implements ActionListener{
         b2.setBounds(100,370,200,30);
         ta1 = new TextArea("write something",2,2);
         ta1.setBounds(100,400,200,60);
-        b1.addActionListener(this);
-        b2.addActionListener(this);
         addWindowListener(new WindowAdapter(){
             public void windowOpened(WindowEvent e){
                 System.out.println("window opened");
@@ -85,6 +83,8 @@ class AWT extends Frame implements ActionListener{
         add(li1);
         add(cb1);
         add(cb2);
+        b1.addActionListener(this);
+        b2.addActionListener(this);
     }public void actionPerformed(ActionEvent e){
         if(e.getSource() == b1){
             if(cb1.getState()){
@@ -187,7 +187,7 @@ class AWT extends Frame implements ActionListener{
     }
 }public class AWT_SWINGS_MT3_PRACTICE {
    public static void main(String[] args) {
-        // AWT awt = new AWT();
-        SWINGS swings = new SWINGS();
+        AWT awt = new AWT();
+        // SWINGS swings = new SWINGS();
    } 
 }
