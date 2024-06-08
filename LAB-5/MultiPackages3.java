@@ -1,5 +1,5 @@
 package MultiplePackages3;
-import MultiplePackages1.MultiPackages1;
+import MultiplePackages.MultiplePackages1.MultiPackages1;
 import MultiplePackages2.MultiPackages2;
 public class MultiPackages3 {
    public static void main(String[] args) {

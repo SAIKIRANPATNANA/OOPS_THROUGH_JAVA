@@ -11,5 +11,4 @@ class ChildThread extends Thread {
         ct2.start();
         ct3.start();
         System.out.println("Hayyoda..!"+Thread.currentThread().getName());
-    }
-}
+    }}

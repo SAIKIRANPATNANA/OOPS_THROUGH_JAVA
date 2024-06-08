@@ -16,7 +16,6 @@ class ChildThread extends Thread {
         System.out.println(Thread.currentThread().getName());
         for(int i=0; i<3; i++){
             System.out.println("MainThread");
-        }
-        System.out.println(10/0);
+        }System.out.println(10/0);
     }
 }

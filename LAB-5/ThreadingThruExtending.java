@@ -4,7 +4,7 @@ class ChildThread extends Thread  {
             System.out.println("Child Thread");
         }
     }
-}public class ThreadinghruExtending{
+}public class ThreadingThruExtending{
     public static void main(String[] args) {
         ChildThread ct = new ChildThread();
         ct.start();

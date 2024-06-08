@@ -233,7 +233,7 @@ class Window1 implements WindowListener{
         // f.setSize(400,300);
         // f.setBackground(Color.green);
         // f.setForeground(Color.red);
-        ExtendedAWT eawt = new ExtendedAWT();
-        // ExtendedSWINGS swings = new ExtendedSWINGS();
+        // ExtendedAWT eawt = new ExtendedAWT();
+        ExtendedSWINGS swings = new ExtendedSWINGS();
     }
 }

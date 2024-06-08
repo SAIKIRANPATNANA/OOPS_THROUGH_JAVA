@@ -121,7 +121,7 @@ class ExtendedThread extends Thread{
     }public static boolean checkSubstring(String str, String original){
         for(int i=0; i<original.length(); i++){
             for(int j=i+1; j<original.length(); j++){
-                if(original.substring(i,j).equals(str)){
+                if(original.substring(i,j+1).equals(str)){
                     return true;
                 }
             }

@@ -1,27 +1,53 @@
-class A extends Thread{
-    public synchronized void first(B b){
-        b.last();
-        System.out.println("A is trying to call last of B");
-    }public synchronized void last(){
-        System.out.println("This is the last method of A");
+class Resource {
+    public void doFun(){
+        System.out.println("Fun Off!");
+        return;
     }
-}class B extends Thread{
-    public synchronized void first(A a){
-        a.last();
-        System.out.println("B is trying to call last of A");
-    }public synchronized void last(){
-        System.out.println("This is the last method of B");
-    }
-}public class DeadLocks extends Thread{
-    A a = new A();
-    B b = new B();
-    public void dl(){
-        this.start();
-        a.first(b);
+}class Thread1 extends Thread {
+    Resource r1;
+    Resource r2;
+    Thread1(Resource r1, Resource r2){
+        this.r1 = r1;
+        this.r2 = r2;
     }public void run(){
-        b.first(a);
-    }public static void main(String[] args) {
-        DeadLocks dead_locks = new DeadLocks();
-        dead_locks.dl();
+        synchronized(r1){
+            r1.doFun();
+            System.out.out("Thread1 locked Resource1");
+        }try{
+            this.sleep(100);
+        }catch(Exception e){
+            System.out.println(e);
+        }synchronized(r2){
+            r2.doFun();
+            System.out.println("Thread1 locked Resource2");
+        }return;
+    }
+}class Thread2 extends Thread {
+    Resource r1;
+    Resource r2;
+    Thread2(Resource r1, Resource r2){
+        this.r1 = r1;
+        this.r2 = r2;
+    }public void run(){
+        synchronized(r2){
+            r2.doFun();
+            System.out.println("Thread2 locked Resource2");
+        }try{
+            this.sleep(100);
+        }catch(Exception e){
+            System.out.println(e);
+        }synchronized(r1){
+            r1.doFun();();
+            System.out.println("Thread2 locked Resource1");
+        }return;
+    }
+}public class DeadLocks{
+    public static void main(String[] args) {
+        Resource r1 = new Resource();
+        Resource r2 = new Resource();
+        Thread1 t1 = new Thread1(r1,r2);
+        Thread2 t2 = new Thread2(r1,r2);
+        t1.start();
+        t2.start();
     }
 }
