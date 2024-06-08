@@ -32,7 +32,7 @@ class Circle{
         return;
     }public int get(){
         return a;
-    }public void hai(){ // dynamic/compiletime polymorphism
+    }public void hai(){ // dynamic/runtime polymorphism
         System.out.println("hai");
     }public int addNumbers(int a, int b){
         return a+b;
@@ -101,16 +101,16 @@ class Circle{
             }
         }return new_str;
     }public static void sortEvenOdd(int arr[]){
-        for(int i=0; i<arr.length; i+=2){
-            for(int j=0; j<arr.length; j+=2){
+        for(int i=0; i<arr.length-1; i+=2){
+            for(int j=0; j<arr.length-1; j+=2){
                 if(j+2<arr.length && arr[j]>arr[j+2]){
                     arr[j] = arr[j]^arr[j+2];
                     arr[j+2] = arr[j]^arr[j+2];
                     arr[j] = arr[j]^arr[j+2];
                 }
             }
-        }for(int i=1; i<arr.length; i+=2){
-            for(int j=1; j<arr.length; j+=2){
+        }for(int i=1; i<arr.length-1; i+=2){
+            for(int j=1; j<arr.length-1; j+=2){
                 if(j+2<arr.length && arr[j]>arr[j+2]){
                     arr[j] = arr[j]^arr[j+2];
                     arr[j+2] = arr[j]^arr[j+2];
@@ -184,7 +184,7 @@ class Circle{
             if(age<18){
                 throw new CustomException("Error");
             }else{
-                System.out.println("You are not eligible to vote");
+                System.out.println("You are eligible to vote");
             }
         }catch(CustomException e){
             System.out.println(e);

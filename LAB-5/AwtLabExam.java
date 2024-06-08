@@ -70,6 +70,5 @@ class AWT extends Frame implements ActionListener{
 }
 public class AwtLabExam {
     public static void main(String[] args) {
-        AWT awt = new AWT();
-    }
+        AWT awt = new AWT()    }
 }
