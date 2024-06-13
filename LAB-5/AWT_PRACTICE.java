@@ -6,6 +6,7 @@ class AWT extends Frame implements ActionListener{
     Button b1,b2,b3,b4;
     TextField t1,t2,t3,t4;
     TextArea ta;
+    Image icon;
     Choice c;
     CheckboxGroup cg1,cg2;
     Checkbox cb1,cb2,cb3,cb4;
@@ -18,6 +19,8 @@ class AWT extends Frame implements ActionListener{
         setLayout(null);
         setSize(1000,500);
         setVisible(true);
+        icon = Toolkit.getDefaultToolkit().getImage("/home/user/Pictures/Wallpapers/WhatsApp Image 2023-11-17 at 14.45.06.jpeg");
+        setIconImage(icon);
         menu = new Menu("Menu");
         i1 = new MenuItem("i1");
         i2 = new MenuItem("i2");
